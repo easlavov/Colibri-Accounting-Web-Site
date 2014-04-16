@@ -1,0 +1,120 @@
+﻿body,
+header,
+div,
+a,
+span,
+section,
+p,
+ul,
+li,
+footer,
+button {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+a:visited,
+a:link {
+  color: #ffffff;
+}
+ul {
+  list-style-type: none;
+}
+body {
+  font-family: Verdana;
+  color: #ffffff;
+  background: #1d4a31;
+}
+body #wrapper {
+  width: 960px;
+  margin: 0 auto;
+  border: 2px solid red;
+}
+body #wrapper header {
+  border: 1px solid white;
+  overflow: hidden;
+  width: 100%;
+  vertical-align: central;
+}
+body #wrapper header a {
+  float: left;
+  margin-left: 30px;
+}
+body #wrapper header span {
+  float: right;
+  margin-top: 30px;
+  margin-right: 30px;
+}
+body #wrapper #main-section {
+  border: 1px solid blue;
+  margin-top: 25px;
+}
+body #wrapper #main-section nav {
+  padding: 0 25px;
+  background: #194e84;
+}
+body #wrapper #main-section nav ul {
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+}
+body #wrapper #main-section nav ul li {
+  float: left;
+}
+body #wrapper #main-section nav ul li a {
+  display: block;
+  padding: 20px 40px;
+  font-weight: bold;
+}
+body #wrapper #main-section nav ul li a:hover {
+  background: orange;
+  color: black;
+}
+body #wrapper #main-section nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 169px;
+  width: 200px;
+  text-align: left;
+  background: #194e84;
+}
+body #wrapper #main-section nav ul li ul li {
+  float: none;
+}
+body #wrapper #main-section nav ul li:hover ul {
+  display: block;
+}
+body #wrapper #main-section #carrousel {
+  width: 100%;
+  overflow: hidden;
+  height: 300px;
+  background: url(../imgs/bg-image-1.jpg);
+}
+body #wrapper #main-section #carrousel #description {
+  width: 350px;
+  margin: 100px 50px;
+}
+body #wrapper #main-section #carrousel #image-container {
+  display: none;
+}
+body #wrapper #main-section #carrousel #prev {
+  display: none;
+}
+body #wrapper #main-section #carrousel #next {
+  display: none;
+}
+body #wrapper #features {
+  border: 1px solid purple;
+  padding: 30px 20px;
+  margin-top: 20px;
+  overflow: hidden;
+  background: #194e84;
+}
+body #wrapper #features ul li {
+  width: 300px;
+  height: 300px;
+  float: left;
+}
+/*# sourceMappingURL=styles.css.map */
