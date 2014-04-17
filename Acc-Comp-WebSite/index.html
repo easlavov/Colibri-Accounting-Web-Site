@@ -14,41 +14,41 @@
             <span>Tel: 000 000 000</span>
         </header>
 
-        <section id="main-section">
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Начало</a>
+                </li>
+                <li>
+                    <a href="about.html">За нас</a>
+                </li>
+                <li>
+                    <a href="services.html">Услуги</a>
+                    <ul id="services-menu">
+                        <li>
+                            <a href="#">Service 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Service 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Service 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="pricing.html">Цени</a>
+                </li>
+                <li>
+                    <a href="clients.html">Клиенти</a>
+                </li>
+                <li>
+                    <a href="contacts.html">Контакти</a>
+                </li>
+            </ul>
+        </nav>
 
-            <nav>
-                <ul>
-                    <li>
-                        <a href="index.html">Начало</a>
-                    </li>
-                    <li>
-                        <a href="about.html">За нас</a>
-                    </li>
-                    <li>
-                        <a href="services.html">Услуги</a>
-                        <ul id="services-menu">
-                            <li>
-                                <a href="#">Service 1</a>
-                            </li>
-                            <li>
-                                <a href="#">Service 2</a>
-                            </li>
-                            <li>
-                                <a href="#">Service 3</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="pricing.html">Цени</a>
-                    </li>
-                    <li>
-                        <a href="clients.html">Клиенти</a>
-                    </li>
-                    <li>
-                        <a href="contacts.html">Контакти</a>
-                    </li>
-                </ul>
-            </nav>
+        <section id="main-section">            
 
             <div id="carrousel">
                 <button id="prev"></button>
@@ -68,17 +68,17 @@
             <ul id="featured-items">
                 <li>
                     <div id="feature-1" class="resume">
-                        <img alt="feature-img" />
-                        <h2>Feature heading</h2>
+                        <img src="imgs/calculator.png" alt="feature-img" />
+                        <h2>За нас</h2>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque suscipit sem sed purus placerat, sit amet pellentesque quam dictum. Aenean nunc augue, ultricies sit amet posuere at, porta hendrerit dolor.
+                            Кантората е основана през 2014г. от екип от висококвалифицирани счетоводители в град София. За сравнително кратък период от време, в резултат на качеството на предлаганите услуги, компанията търпи изключително динамично развитие.
                         </p>
                     </div>
                 </li>
 
                 <li>
                     <div id="feature-2" class="resume">
-                        <img alt="feature-img" />
+                        <img src="imgs/calculator.png" alt="feature-img" />
                         <h2>Feature heading</h2>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque suscipit sem sed purus placerat, sit amet pellentesque quam dictum. Aenean nunc augue, ultricies sit amet posuere at, porta hendrerit dolor.
@@ -88,7 +88,7 @@
 
                 <li>
                     <div id="feature-3" class="resume">
-                        <img alt="feature-img" />
+                        <img src="imgs/calculator.png" alt="feature-img" />
                         <h2>Feature heading</h2>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque suscipit sem sed purus placerat, sit amet pellentesque quam dictum. Aenean nunc augue, ultricies sit amet posuere at, porta hendrerit dolor.
@@ -100,10 +100,39 @@
 
         <footer>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque suscipit sem sed purus placerat, sit amet pellentesque quam dictum. Aenean nunc augue, ultricies sit amet posuere at, porta hendrerit dolor.
+                Колибри ООД
             </p>
         </footer>
     </div>
 
+    <script>
+        var headingOne = "Коректност";
+        var headingTwo = "Конкурентност";
+        var desc1 = "Счетоводна къща Колибри е вашият сигурен партньор в бизнеса";
+        var desc2 = "С наша помощ повече никога няма да ви се налага да се притеснявате за счетоводни проблеми";
+
+        var current = 0;
+        function changeBackground() {
+            var car = document.getElementById('carrousel');
+            var head = document.getElementById('desc-heading');
+            var cont = document.getElementById('desc-content');
+
+            if (current === 0) {
+                car.style.background = 'url(../imgs/bg-image-2.jpg)';
+                head.innerHTML = headingTwo;
+                cont.innerHTML = desc2;
+                current = 1;
+            }
+            else {
+                car.style.background = 'url(../imgs/bg-image-1.jpg)';
+                head.innerHTML = headingOne;
+                cont.innerHTML = desc1;
+                current = 0;
+            }
+
+
+        }
+        setInterval(changeBackground, 5000);
+    </script>
 </body>
 </html>
