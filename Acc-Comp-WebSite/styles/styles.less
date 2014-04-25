@@ -3,7 +3,7 @@
 @default-font-color: white;
 @alt-font-color: black;
 @default-bgr-color: #1D4A31;
-@alt-bgr-color: #194E84;
+@alt-bgr-color: #3F602B;
 
 .horizontalGradient (@top-color, @top-perc, @bottom-color, @bottom-perc) {
     background: @top-color; /* Old browsers */
@@ -38,7 +38,7 @@ ul {
 
 // Styling
 section, footer, nav {
-    border-radius: 15px;
+    border-radius: 5px;
 }
 
 section {
@@ -50,7 +50,7 @@ section {
 body {
     font-family: @default-font-fam;
     color: @default-font-color;
-    background: url(../imgs/main-bg3.jpg);
+    background: url(../imgs/big-colibri.jpg);
 
     #wrapper {
         width: 960px;
@@ -67,11 +67,20 @@ body {
                 margin-left: 30px;
             }
 
-            span {
-                font-weight: bold;
+            div {
                 float: right;
-                margin-top: 30px;
-                margin-right: 30px;
+                text-align: right;
+
+                span {
+                    font-weight: bold;
+                    margin-right: 30px;
+                    display: block;
+                }
+
+                #tel-span {
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+                }
             }
         }
 
@@ -93,7 +102,7 @@ body {
                         font-weight: bold;
 
                         &:hover {
-                            background: orange;
+                            background: #659D32;
                             color: black;
                         }
                     }
@@ -102,12 +111,19 @@ body {
                         display: none;
                         position: absolute;
                         top: 139px;
-                        width: 200px;
+                        width: 400px;
                         text-align: left;
                         background: @alt-bgr-color;
+                        border: 1px solid #659D32;
+                        border-top: none;
 
                         li {
                             float: none;
+                            border-bottom: 1px solid #659D32;
+
+                            &:last-of-type {
+                                border: none;
+                            }
                         }
                     }
 
@@ -121,7 +137,7 @@ body {
         #main-section {
             /*border: 1px solid blue;*/
             margin-top: 25px;
-            color:white;
+            color: white;
 
             #carrousel {
                 width: 100%;
@@ -130,8 +146,9 @@ body {
                 background: url(../imgs/bg-image-1.jpg);
 
                 #description {
-                    width: 350px;
+                    width: 550px;
                     margin: 100px 50px;
+                    font-size: 24px;
                 }
 
                 #image-container {
@@ -154,16 +171,22 @@ body {
             margin-top: 20px;
             overflow: hidden;
             background: @alt-bgr-color;
-            color:white;
+            color: white;
 
             ul {
 
                 li {
                     width: 280px;
-                    height: 300px;
+                    /*height: 350px;*/
                     float: left;
                     margin-right: 10px;
                     margin-left: 8px;
+                    padding:1px;
+                    border-radius:5px;
+
+                    &:hover {
+                        background:#659D32;
+                    }
 
                     .resume {
 
@@ -174,7 +197,29 @@ body {
                         }
                     }
 
-                    &:hover {
+                    #feature-3 {
+
+
+                        h2 {
+                            padding-top: 20px;
+                        }
+
+                        ul {
+                            list-style-type: disc;
+
+                            li {
+                                height: auto;
+                                margin-bottom: 10px;
+
+                                &:first-line {
+                                    padding-left: 10px;
+                                }
+
+                                &:hover {
+                                    background:none;
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -200,6 +245,7 @@ body {
             }
 
             p {
+                text-align: justify;
                 padding: 20px;
             }
 
@@ -219,32 +265,66 @@ body {
             #services-list {
                 overflow: hidden;
                 text-align: center;
+                padding-top: 40px;
 
                 li {
                     display: inline-block;
-                    margin: 0 20px;
+                    margin: 10px 20px;
+                    .horizontalGradient(green, 0, white, 90%);
+                    border-radius: 5px;
+                    text-align: center;
 
                     a {
                         display: block;
-                        width: 250px;
+                        width: 300px;
                         height: 200px;
+                        border-radius: 5px;
+
+                        h2 {
+                            color: black;
+                        }
+
+                        &:first-of-type {
+                            margin-left: 35px;
+                        }
+                    }
+
+                    &:hover {
+                        background: #F0F0F0;
                     }
 
                     #service-1-anchor {
-                        background: url(../imgs/services-placeholder.png);
-                        background-position-x: 40px;
+                        background: url(../imgs/ballpoint.png);
+                        background-position-x: 120px;
+                        background-position-y: 40px;
                         background-repeat: no-repeat;
                     }
 
                     #service-2-anchor {
-                        background: url(../imgs/services-placeholder.png);
-                        background-position-x: 40px;
+                        background: url(../imgs/calc.png);
+                        background-position-x: 70px;
+                        background-position-y: 40px;
                         background-repeat: no-repeat;
                     }
 
                     #service-3-anchor {
-                        background: url(../imgs/services-placeholder.png);
-                        background-position-x: 40px;
+                        background: url(../imgs/pen.png);
+                        background-position-x: 70px;
+                        background-position-y: 40px;
+                        background-repeat: no-repeat;
+                    }
+
+                    #service-4-anchor {
+                        background: url(../imgs/pencil-long.png);
+                        background-position-x: 70px;
+                        background-position-y: 40px;
+                        background-repeat: no-repeat;
+                    }
+
+                    #service-5-anchor {
+                        background: url(../imgs/pencil-short.png);
+                        background-position-x: 90px;
+                        background-position-y: 40px;
                         background-repeat: no-repeat;
                     }
                 }
