@@ -99,11 +99,13 @@ body {
                     a {
                         display: block;
                         padding: 20px 40px;
+                        font-size:1em;
                         font-weight: bold;
+                        transition: background 0.2s ease;
 
                         &:hover {
                             background: #659D32;
-                            color: black;
+                            /*color: black;*/
                         }
                     }
 
@@ -134,6 +136,7 @@ body {
             }
         }
 
+        // INDEX PAGE //
         #main-section {
             /*border: 1px solid blue;*/
             margin-top: 25px;
@@ -144,11 +147,12 @@ body {
                 overflow: hidden;
                 height: 300px;
                 background: url(../imgs/bg-image-1.jpg);
+                transition: all 0.5s ease;
 
                 #description {
                     width: 550px;
                     margin: 100px 50px;
-                    font-size: 24px;
+                    font-size: 24px;                    
                 }
 
                 #image-container {
@@ -167,7 +171,7 @@ body {
 
         #features {
             /*border: 1px solid purple;*/
-            padding: 30px 30px;
+            padding: 30px 10px;
             margin-top: 20px;
             overflow: hidden;
             background: @alt-bgr-color;
@@ -179,10 +183,14 @@ body {
                     width: 280px;
                     /*height: 350px;*/
                     float: left;
-                    margin-right: 10px;
                     margin-left: 8px;
-                    padding:1px;
                     border-radius:5px;
+                    padding:10px 10px;
+                    transition: background 0.2s ease;
+
+                    a {
+                        display:block;
+                    }
 
                     &:hover {
                         background:#659D32;
@@ -197,8 +205,23 @@ body {
                         }
                     }
 
-                    #feature-3 {
+                    #feature-2 {
+                        ul {
+                            list-style-type: disc;
+                            padding-left:50px;
 
+                            li {
+                                height: auto;
+                                font-weight:bold;
+
+                                &:hover {
+                                    background:none;
+                                }
+                            }
+                        }
+                    }
+
+                    #feature-3 {
 
                         h2 {
                             padding-top: 20px;
@@ -211,10 +234,6 @@ body {
                                 height: auto;
                                 margin-bottom: 10px;
 
-                                &:first-line {
-                                    padding-left: 10px;
-                                }
-
                                 &:hover {
                                     background:none;
                                 }
@@ -225,6 +244,7 @@ body {
             }
         }
 
+        // ABOUT PAGE //
         #about-section {
             color: black;
             overflow: hidden;
@@ -260,6 +280,7 @@ body {
             }
         }
 
+        // SERVICES PAGE //
         #services-section {
 
             #services-list {
@@ -273,6 +294,7 @@ body {
                     .horizontalGradient(green, 0, white, 90%);
                     border-radius: 5px;
                     text-align: center;
+                    transition: background 0.2s ease-in-out;
 
                     a {
                         display: block;
@@ -329,6 +351,11 @@ body {
                     }
                 }
             }
+        }
+
+        #service-resume {
+            padding:50px;
+
         }
 
         footer {

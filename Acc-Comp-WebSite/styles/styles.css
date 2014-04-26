@@ -80,11 +80,13 @@ body #wrapper nav ul li {
 body #wrapper nav ul li a {
   display: block;
   padding: 20px 40px;
+  font-size: 1em;
   font-weight: bold;
+  transition: background 0.2s ease;
 }
 body #wrapper nav ul li a:hover {
   background: #659D32;
-  color: black;
+  /*color: black;*/
 }
 body #wrapper nav ul li ul {
   display: none;
@@ -116,6 +118,7 @@ body #wrapper #main-section #carrousel {
   overflow: hidden;
   height: 300px;
   background: url(../imgs/bg-image-1.jpg);
+  transition: all 0.5s ease;
 }
 body #wrapper #main-section #carrousel #description {
   width: 550px;
@@ -133,7 +136,7 @@ body #wrapper #main-section #carrousel #next {
 }
 body #wrapper #features {
   /*border: 1px solid purple;*/
-  padding: 30px 30px;
+  padding: 30px 10px;
   margin-top: 20px;
   overflow: hidden;
   background: #3f602b;
@@ -143,10 +146,13 @@ body #wrapper #features ul li {
   width: 280px;
   /*height: 350px;*/
   float: left;
-  margin-right: 10px;
   margin-left: 8px;
-  padding: 1px;
   border-radius: 5px;
+  padding: 10px 10px;
+  transition: background 0.2s ease;
+}
+body #wrapper #features ul li a {
+  display: block;
 }
 body #wrapper #features ul li:hover {
   background: #659D32;
@@ -155,6 +161,17 @@ body #wrapper #features ul li .resume img {
   width: 100px;
   float: left;
   margin: 5px;
+}
+body #wrapper #features ul li #feature-2 ul {
+  list-style-type: disc;
+  padding-left: 50px;
+}
+body #wrapper #features ul li #feature-2 ul li {
+  height: auto;
+  font-weight: bold;
+}
+body #wrapper #features ul li #feature-2 ul li:hover {
+  background: none;
 }
 body #wrapper #features ul li #feature-3 h2 {
   padding-top: 20px;
@@ -165,9 +182,6 @@ body #wrapper #features ul li #feature-3 ul {
 body #wrapper #features ul li #feature-3 ul li {
   height: auto;
   margin-bottom: 10px;
-}
-body #wrapper #features ul li #feature-3 ul li:first-line {
-  padding-left: 10px;
 }
 body #wrapper #features ul li #feature-3 ul li:hover {
   background: none;
@@ -224,6 +238,7 @@ body #wrapper #services-section #services-list li {
   /* IE6-9 */
   border-radius: 5px;
   text-align: center;
+  transition: background 0.2s ease-in-out;
 }
 body #wrapper #services-section #services-list li a {
   display: block;
@@ -269,6 +284,9 @@ body #wrapper #services-section #services-list li #service-5-anchor {
   background-position-x: 90px;
   background-position-y: 40px;
   background-repeat: no-repeat;
+}
+body #wrapper #service-resume {
+  padding: 50px;
 }
 body #wrapper footer {
   margin-top: 20px;
