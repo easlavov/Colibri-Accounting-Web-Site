@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Page title</title>
+    <title>Home page</title>
     <link href="styles/styles.css" rel="stylesheet" />
     <meta charset="utf-8" />
 </head>
@@ -12,8 +12,8 @@
                 <h1>Счетоводна къща Колибри</h1>
             </a>
             <div>
-                <span id="tel-span">Tel: 000 000 000</span>
-                <span id="email-span">colibri_accounting@abv.bg</span>
+                <span id="tel-span">Тел.: 0884 063 683</span>
+                <span id="email-span"><a href="mailto:colibri_accounting@abv.bg">colibri_accounting@abv.bg</a></span>
             </div>
 
         </header>
@@ -79,10 +79,13 @@
                 <li>
                     <a href="about.html">
                         <div id="feature-1" class="resume">
-                            <img src="imgs/bird.png" alt="feature-img" />
-                            <h2>За нас</h2>
+                            <div>
+                                <img src="imgs/bird.png" alt="feature-img" />
+                                <h2>За нас</h2>
+                            </div>
+                            
                             <p>
-                                СЧЕТОВОДНА КЪЩА КОЛИБРИ е специализирана фирма в областта на счетоводните услуги, со- циалното и здравно осигу- ряване, финансовите и данъчни консултации предимно за нуждите на малкия и среден бизнес. Ние знаем какво е необходимо за стартирането, развитието и успеха на всеки един бизнес!
+                                СЧЕТОВОДНА КЪЩА КОЛИБРИ е специализирана фирма в областта на счетоводните услуги, социалното и здравно осигуряване, финансовите и данъчни консултации предимно за нуждите на малкия и среден бизнес. Ние знаем какво е необходимо за стартирането, развитието и успеха на всеки един бизнес!
                             </p>
                         </div>
                     </a>
@@ -92,8 +95,10 @@
                 <li>
                     <a href="services.html">
                         <div id="feature-2" class="resume">
-                            <img src="imgs/service.png" alt="feature-img" />
-                            <h2>Нашите услуги</h2>
+                            <div>
+                                <img src="imgs/service.png" alt="feature-img" />
+                                <h2>Нашите услуги</h2>
+                            </div>
                             <p>
                                 Вижте пълната гама от продукти и услуги, които предлагаме!
                                 <ul>
@@ -110,8 +115,10 @@
                 <li>
                     <a href="pricing.html">
                         <div id="feature-3" class="resume">
-                            <img src="imgs/exclamation.png" alt="feature-img" />
-                            <h2>Промоции и цени</h2>
+                            <div>
+                                <img src="imgs/exclamation.png" alt="feature-img" />
+                                <h2>Промоции и цени</h2>
+                            </div>
                             <ul>
                                 <li><strong>10%</strong> отстъпка от цената на счетоводно обслужване при сключване на 1-годишен дого- вор за фирми, нерегистрирани по ддс!</li>
                                 <li><strong>15%</strong> отстъпка от цената на счетоводно обслужване при сключване на 1-годишен дого- вор за фирми, регистрирани по ддс!</li>
@@ -135,7 +142,7 @@
         var headingThree = "Сигурност";
         var desc1 = "Счетоводна къща Колибри е вашият надежден партньор в бизнеса";
         var desc2 = "Счетоводни услуги на високо ниво";
-        var desc3 = "С нас данните на Вашата фирма са в сигурни ръце";
+        var desc3 = "С нас данните на Вашата фирма са в сигурни ръце!";
 
         var current = 0;
         function changeBackground() {
@@ -144,19 +151,19 @@
             var cont = document.getElementById('desc-content');
 
             if (current === 0) {
-                car.style.background = 'url(../imgs/bg-image-2.jpg)';
+                car.style.background = 'url(../imgs/bg-image-5.jpg)';
                 head.innerHTML = headingTwo;
                 cont.innerHTML = desc2;
                 current = 1;
             }
             else if (current === 1) {
-                car.style.background = 'url(../imgs/bg-image-3.jpg)';
+                car.style.background = 'url(../imgs/bg-image-6.jpg)';
                 head.innerHTML = headingThree;
                 cont.innerHTML = desc3;
                 current = 2;
             }
             else if (current === 2) {
-                car.style.background = 'url(../imgs/bg-image-1.jpg)'; // change
+                car.style.background = 'url(../imgs/bg-image-4.jpg)'; // change
                 head.innerHTML = headingOne;
                 cont.innerHTML = desc1;
                 current = 0;

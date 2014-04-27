@@ -22,10 +22,32 @@ a:link {
 ul {
   list-style-type: none;
 }
+html {
+  height: 100%;
+  overflow-y: scroll;
+  background: #78be2a;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #78be2a 0, #baea40 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #78be2a), color-stop(100%, #baea40));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #78be2a 0, #baea40 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #78be2a 0, #baea40 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #78be2a 0, #baea40 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #78be2a 0, #baea40 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@top-color', endColorstr='@bottom-color', GradientType=0);
+  /* IE6-9 */
+  background-attachment: fixed;
+}
 section,
 footer,
 nav {
   border-radius: 5px;
+  margin-bottom: 1px;
 }
 section {
   background: white;
@@ -35,12 +57,10 @@ section {
 body {
   font-family: Verdana;
   color: #ffffff;
-  background: url(../imgs/big-colibri.jpg);
 }
 body #wrapper {
   width: 960px;
   margin: 0 auto;
-  /*border: 2px solid red;*/
 }
 body #wrapper header {
   /*border: 1px solid white;*/
@@ -60,6 +80,9 @@ body #wrapper header div span {
   font-weight: bold;
   margin-right: 30px;
   display: block;
+}
+body #wrapper header div span a:hover {
+  color: blue;
 }
 body #wrapper header div #tel-span {
   margin-top: 20px;
@@ -117,13 +140,17 @@ body #wrapper #main-section #carrousel {
   width: 100%;
   overflow: hidden;
   height: 300px;
-  background: url(../imgs/bg-image-1.jpg);
+  background: url(../imgs/bg-image-4.jpg);
   transition: all 0.5s ease;
 }
 body #wrapper #main-section #carrousel #description {
   width: 550px;
   margin: 100px 50px;
   font-size: 24px;
+  font-family: Calibri;
+  color: black;
+  font-style: italic;
+  font-weight: bold;
 }
 body #wrapper #main-section #carrousel #image-container {
   display: none;
@@ -151,6 +178,9 @@ body #wrapper #features ul li {
   padding: 10px 10px;
   transition: background 0.2s ease;
 }
+body #wrapper #features ul li div {
+  overflow: hidden;
+}
 body #wrapper #features ul li a {
   display: block;
 }
@@ -173,8 +203,8 @@ body #wrapper #features ul li #feature-2 ul li {
 body #wrapper #features ul li #feature-2 ul li:hover {
   background: none;
 }
-body #wrapper #features ul li #feature-3 h2 {
-  padding-top: 20px;
+body #wrapper #features ul li #feature-3 img {
+  width: 80px;
 }
 body #wrapper #features ul li #feature-3 ul {
   list-style-type: disc;
@@ -190,6 +220,7 @@ body #wrapper #about-section {
   color: black;
   overflow: hidden;
   border-radius: 15px;
+  background: #E8E8E8;
 }
 body #wrapper #about-section header h2 {
   font-size: 2em;
@@ -203,6 +234,8 @@ body #wrapper #about-section img {
 body #wrapper #about-section p {
   text-align: justify;
   padding: 20px;
+  font-size: 1.3em;
+  text-indent: 50px;
 }
 body #wrapper #about-section > footer {
   background: white;
@@ -211,6 +244,10 @@ body #wrapper #about-section > footer a {
   color: black;
   float: right;
   padding: 15px;
+}
+body #wrapper #services-section {
+  margin-bottom: 20px;
+  background: #E8E8E8;
 }
 body #wrapper #services-section #services-list {
   overflow: hidden;
@@ -222,17 +259,17 @@ body #wrapper #services-section #services-list li {
   margin: 10px 20px;
   background: #008000;
   /* Old browsers */
-  background: -moz-linear-gradient(top, #008000 0, #ffffff 90%);
+  background: -moz-linear-gradient(top, #008000 0, #e8e8e8 90%);
   /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #008000), color-stop(90%, #ffffff));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #008000), color-stop(90%, #e8e8e8));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #008000 0, #ffffff 90%);
+  background: -webkit-linear-gradient(top, #008000 0, #e8e8e8 90%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #008000 0, #ffffff 90%);
+  background: -o-linear-gradient(top, #008000 0, #e8e8e8 90%);
   /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #008000 0, #ffffff 90%);
+  background: -ms-linear-gradient(top, #008000 0, #e8e8e8 90%);
   /* IE10+ */
-  background: linear-gradient(to bottom, #008000 0, #ffffff 90%);
+  background: linear-gradient(to bottom, #008000 0, #e8e8e8 90%);
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@top-color', endColorstr='@bottom-color', GradientType=0);
   /* IE6-9 */
@@ -285,10 +322,122 @@ body #wrapper #services-section #services-list li #service-5-anchor {
   background-position-y: 40px;
   background-repeat: no-repeat;
 }
-body #wrapper #service-resume {
+body #wrapper #service-resume,
+body #wrapper #pricing-section,
+body #wrapper #clients-section,
+body #wrapper #contacts-section {
   padding: 50px;
+  background: #E8E8E8;
+  margin-bottom: 20px;
+}
+body #wrapper #service-resume header,
+body #wrapper #pricing-section header,
+body #wrapper #clients-section header,
+body #wrapper #contacts-section header {
+  padding: 10px 30px;
+}
+body #wrapper #service-resume header img,
+body #wrapper #pricing-section header img,
+body #wrapper #clients-section header img,
+body #wrapper #contacts-section header img {
+  max-width: 100px;
+  display: inline-block;
+}
+body #wrapper #service-resume header h2,
+body #wrapper #pricing-section header h2,
+body #wrapper #clients-section header h2,
+body #wrapper #contacts-section header h2 {
+  display: inline-block;
+  /*padding-top: 20px;*/
+  padding-left: 20px;
+  font-size: 1.9em;
+}
+body #wrapper #service-resume img,
+body #wrapper #pricing-section img,
+body #wrapper #clients-section img,
+body #wrapper #contacts-section img {
+  float: left;
+}
+body #wrapper #service-resume strong,
+body #wrapper #pricing-section strong,
+body #wrapper #clients-section strong,
+body #wrapper #contacts-section strong {
+  display: block;
+  margin-left: 60px;
+  margin-top: 40px;
+  font-size: 1.1em;
+}
+body #wrapper #service-resume ul,
+body #wrapper #pricing-section ul,
+body #wrapper #clients-section ul,
+body #wrapper #contacts-section ul {
+  list-style-type: decimal;
+  margin-left: 60px;
+  margin-top: 40px;
+}
+body #wrapper #service-resume ul li,
+body #wrapper #pricing-section ul li,
+body #wrapper #clients-section ul li,
+body #wrapper #contacts-section ul li {
+  margin-bottom: 10px;
+  font-size: 1.3em;
+}
+body #wrapper #service-resume div,
+body #wrapper #pricing-section div,
+body #wrapper #clients-section div,
+body #wrapper #contacts-section div {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  background: #E0E0E0;
+}
+body #wrapper #service-resume div h3,
+body #wrapper #pricing-section div h3,
+body #wrapper #clients-section div h3,
+body #wrapper #contacts-section div h3 {
+  margin-left: 40px;
+}
+body #wrapper #service-resume div p,
+body #wrapper #pricing-section div p,
+body #wrapper #clients-section div p,
+body #wrapper #contacts-section div p {
+  margin-left: 60px;
+}
+body #wrapper #service-resume div li,
+body #wrapper #pricing-section div li,
+body #wrapper #clients-section div li,
+body #wrapper #contacts-section div li {
+  font-size: 1em;
+}
+body #wrapper #service-resume table,
+body #wrapper #pricing-section table,
+body #wrapper #clients-section table,
+body #wrapper #contacts-section table {
+  margin-left: 60px;
+  margin-top: 40px;
+  border-collapse: collapse;
+}
+body #wrapper #service-resume table td,
+body #wrapper #pricing-section table td,
+body #wrapper #clients-section table td,
+body #wrapper #contacts-section table td,
+body #wrapper #service-resume table th,
+body #wrapper #pricing-section table th,
+body #wrapper #clients-section table th,
+body #wrapper #contacts-section table th {
+  border: 1px solid black;
+  padding: 5px;
+}
+body #wrapper #contacts-section p {
+  font-size: 1.3em;
+  margin: 20px 0 20px 40px;
+}
+body #wrapper #contacts-section p a {
+  color: blue;
 }
 body #wrapper footer {
+  display: none;
   margin-top: 20px;
   background: #3f602b;
   padding: 5px 20px;
