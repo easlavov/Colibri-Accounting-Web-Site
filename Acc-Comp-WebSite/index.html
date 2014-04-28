@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Home page</title>
+    <title>СК Колибри - Начало</title>
     <link href="styles/styles.css" rel="stylesheet" />
     <meta charset="utf-8" />
 </head>
@@ -61,16 +61,16 @@
         <section id="main-section">
 
             <div id="carrousel">
-                <button id="prev"></button>
                 <div id="description">
                     <h2 id="desc-heading">Коректност</h2>
                     <p id="desc-content">
                         Счетоводна къща Колибри е вашият сигурен партньор в бизнеса
                     </p>
+
+                    <img id="colibri-img" src="imgs/colibri-flipped.png" />
                 </div>
-                <div id="image-container"></div>
-                <button id="next"></button>
             </div>
+            
 
         </section>
 
@@ -121,7 +121,7 @@
                             </div>
                             <ul>
                                 <li><strong>10%</strong> отстъпка от цената на счетоводно обслужване при сключване на 1-годишен дого- вор за фирми, нерегистрирани по ддс!</li>
-                                <li><strong>15%</strong> отстъпка от цената на счетоводно обслужване при сключване на 1-годишен дого- вор за фирми, регистрирани по ддс!</li>
+                                <li><strong>15%</strong> отстъпка от цената на счетоводно обслужване при сключване на 1-годишен дого- вор за фирми, регистрирани по ДДС!</li>
                             </ul>
                         </div>
                     </a>
@@ -129,19 +129,27 @@
             </ul>
         </section>
 
-        <!--<footer>
-            <p>
-                Колибри ООД
-            </p>
-        </footer>-->
+        <footer id="main-page-footer">
+            <div class="fb-like-box" data-href="https://www.facebook.com/pages/%D0%A1%D1%87%D0%B5%D1%82%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0-%D0%BA%D1%8A%D1%89%D0%B0-%D0%9A%D0%BE%D0%BB%D0%B8%D0%B1%D1%80%D0%B8/759587477407312" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="false" data-show-border="true"></div>
+        </footer>
     </div>
+
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
 
     <script>
         var headingOne = "Коректност";
         var headingTwo = "Конкурентност";
         var headingThree = "Сигурност";
         var desc1 = "Счетоводна къща Колибри е вашият надежден партньор в бизнеса";
-        var desc2 = "Счетоводни услуги на високо ниво";
+        var desc2 = "Счетоводни услуги на високо ниво от опитни специалисти";
         var desc3 = "С нас данните на Вашата фирма са в сигурни ръце!";
 
         var current = 0;

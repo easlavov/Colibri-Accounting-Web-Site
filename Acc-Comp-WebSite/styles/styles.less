@@ -2,8 +2,9 @@
 @default-font-size: 16px;
 @default-font-color: white;
 @alt-font-color: black;
-@default-bgr-color: #1D4A31;
+@default-bgr-color: #78BE2A;
 @alt-bgr-color: #3F602B;
+@hover-color: #659D32;
 
 .horizontalGradient (@top-color, @top-perc, @bottom-color, @bottom-perc) {
     background: @top-color; /* Old browsers */
@@ -37,7 +38,7 @@ ul {
 html {
     height: 100%;
     overflow-y: scroll;
-    .horizontalGradient(#78BE2A, 0, #BAEA40, 100%);
+    .horizontalGradient(@default-bgr-color, 0, #BAEA40, 100%);
     background-attachment: fixed;
 }
 
@@ -62,7 +63,6 @@ body {
         margin: 0 auto;
 
         header {
-            /*border: 1px solid white;*/
             overflow: hidden;
             width: 100%;
             vertical-align: central;
@@ -81,8 +81,8 @@ body {
                     margin-right: 30px;
                     display: block;
 
-                    a:hover{
-                        color:blue;
+                    a:hover {
+                        color: blue;
                     }
                 }
 
@@ -113,7 +113,7 @@ body {
                         transition: background 0.2s ease;
 
                         &:hover {
-                            background: #659D32;
+                            background: @hover-color;
                             /*color: black;*/
                         }
                     }
@@ -125,12 +125,12 @@ body {
                         width: 400px;
                         text-align: left;
                         background: @alt-bgr-color;
-                        border: 1px solid #659D32;
+                        border: 1px solid @hover-color;
                         border-top: none;
 
                         li {
                             float: none;
-                            border-bottom: 1px solid #659D32;
+                            border-bottom: 1px solid @hover-color;
 
                             &:last-of-type {
                                 border: none;
@@ -146,10 +146,9 @@ body {
         }
         // INDEX PAGE //
         #main-section {
-            /*border: 1px solid blue;*/
             margin-top: 25px;
             color: white;
-
+            border:5px solid @alt-bgr-color;
 
             #carrousel {
                 width: 100%;
@@ -168,16 +167,10 @@ body {
                     font-weight: bold;
                 }
 
-                #image-container {
-                    display: none;
-                }
-
-                #prev {
-                    display: none;
-                }
-
-                #next {
-                    display: none;
+                #colibri-img {
+                    position: relative;
+                    left: 570px;
+                    top: -250px;
                 }
             }
         }
@@ -194,7 +187,6 @@ body {
 
                 li {
                     width: 280px;
-                    /*height: 350px;*/
                     float: left;
                     margin-left: 8px;
                     border-radius: 5px;
@@ -210,7 +202,7 @@ body {
                     }
 
                     &:hover {
-                        background: #659D32;
+                        background: @hover-color;
                     }
 
                     .resume {
@@ -250,6 +242,7 @@ body {
                             li {
                                 height: auto;
                                 margin-bottom: 10px;
+                                padding-left:5px;
 
                                 &:hover {
                                     background: none;
@@ -260,7 +253,6 @@ body {
                 }
             }
         }
-
         // ABOUT PAGE //
         #about-section {
             color: black;
@@ -285,9 +277,8 @@ body {
             p {
                 text-align: justify;
                 padding: 20px;
-                font-size:1.3em;
-
-                    text-indent:50px;
+                font-size: 1.3em;
+                text-indent: 50px;
             }
 
             & > footer {
@@ -302,7 +293,7 @@ body {
         }
         // SERVICES PAGE //
         #services-section {
-            margin-bottom:20px;            
+            margin-bottom: 20px;
             background: #E8E8E8;
 
             #services-list {
@@ -313,7 +304,7 @@ body {
                 li {
                     display: inline-block;
                     margin: 10px 20px;
-                    .horizontalGradient(green, 0, #E8E8E8, 90%);
+                    .horizontalGradient(@default-bgr-color, 0, #E8E8E8, 90%);
                     border-radius: 5px;
                     text-align: center;
                     transition: background 0.2s ease-in-out;
@@ -334,7 +325,7 @@ body {
                     }
 
                     &:hover {
-                        background: #F0F0F0;
+                        background: #FDD017;
                     }
 
                     #service-1-anchor {
@@ -378,7 +369,7 @@ body {
         #service-resume, #pricing-section, #clients-section, #contacts-section {
             padding: 50px;
             background: #E8E8E8;
-            margin-bottom:20px;
+            margin-bottom: 20px;
 
             header {
                 padding: 10px 30px;
@@ -422,7 +413,7 @@ body {
                 border: 1px solid black;
                 border-radius: 5px;
                 margin-bottom: 30px;
-                padding-bottom: 10px;
+                padding-bottom: 20px;
                 background: #E0E0E0;
 
                 h3 {
@@ -438,9 +429,13 @@ body {
                 }
             }
 
+            #last-div{
+                margin-bottom:0;
+            }
+
             table {
-                margin-left: 60px;
-                margin-top: 40px;
+                margin: 0 10px;
+                margin-top: 20px;
                 border-collapse: collapse;
 
                 td, th {
@@ -451,21 +446,40 @@ body {
         }
 
         #contacts-section {
+            overflow:hidden;
             p {
                 font-size: 1.3em;
                 margin: 20px 0 20px 40px;
+                display:inline-block;
+                width:500px;
 
                 a {
                     color: blue;
                 }
             }
+
+            iframe{
+                float:right;
+            }
         }
 
         footer {
-            display: none;
+            /*display: none;*/
             margin-top: 20px;
-            background: @alt-bgr-color;
+            background: #E8E8E8;
             padding: 5px 20px;
+            margin-bottom:20px;
+        }
+
+        #main-page-footer{
+            display:none;
+            background:none;
+            text-align:center;
+
+            div{
+                border:5px solid @alt-bgr-color;
+                border-radius:5px;
+            }
         }
     }
 }

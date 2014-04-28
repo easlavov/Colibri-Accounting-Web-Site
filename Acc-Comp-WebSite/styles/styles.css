@@ -63,7 +63,6 @@ body #wrapper {
   margin: 0 auto;
 }
 body #wrapper header {
-  /*border: 1px solid white;*/
   overflow: hidden;
   width: 100%;
   vertical-align: central;
@@ -108,7 +107,7 @@ body #wrapper nav ul li a {
   transition: background 0.2s ease;
 }
 body #wrapper nav ul li a:hover {
-  background: #659D32;
+  background: #659d32;
   /*color: black;*/
 }
 body #wrapper nav ul li ul {
@@ -118,12 +117,12 @@ body #wrapper nav ul li ul {
   width: 400px;
   text-align: left;
   background: #3f602b;
-  border: 1px solid #659D32;
+  border: 1px solid #659d32;
   border-top: none;
 }
 body #wrapper nav ul li ul li {
   float: none;
-  border-bottom: 1px solid #659D32;
+  border-bottom: 1px solid #659d32;
 }
 body #wrapper nav ul li ul li:last-of-type {
   border: none;
@@ -132,9 +131,9 @@ body #wrapper nav ul li:hover ul {
   display: block;
 }
 body #wrapper #main-section {
-  /*border: 1px solid blue;*/
   margin-top: 25px;
   color: white;
+  border: 5px solid #3f602b;
 }
 body #wrapper #main-section #carrousel {
   width: 100%;
@@ -152,14 +151,10 @@ body #wrapper #main-section #carrousel #description {
   font-style: italic;
   font-weight: bold;
 }
-body #wrapper #main-section #carrousel #image-container {
-  display: none;
-}
-body #wrapper #main-section #carrousel #prev {
-  display: none;
-}
-body #wrapper #main-section #carrousel #next {
-  display: none;
+body #wrapper #main-section #carrousel #colibri-img {
+  position: relative;
+  left: 570px;
+  top: -250px;
 }
 body #wrapper #features {
   /*border: 1px solid purple;*/
@@ -171,7 +166,6 @@ body #wrapper #features {
 }
 body #wrapper #features ul li {
   width: 280px;
-  /*height: 350px;*/
   float: left;
   margin-left: 8px;
   border-radius: 5px;
@@ -185,7 +179,7 @@ body #wrapper #features ul li a {
   display: block;
 }
 body #wrapper #features ul li:hover {
-  background: #659D32;
+  background: #659d32;
 }
 body #wrapper #features ul li .resume img {
   width: 100px;
@@ -212,6 +206,7 @@ body #wrapper #features ul li #feature-3 ul {
 body #wrapper #features ul li #feature-3 ul li {
   height: auto;
   margin-bottom: 10px;
+  padding-left: 5px;
 }
 body #wrapper #features ul li #feature-3 ul li:hover {
   background: none;
@@ -257,19 +252,19 @@ body #wrapper #services-section #services-list {
 body #wrapper #services-section #services-list li {
   display: inline-block;
   margin: 10px 20px;
-  background: #008000;
+  background: #78be2a;
   /* Old browsers */
-  background: -moz-linear-gradient(top, #008000 0, #e8e8e8 90%);
+  background: -moz-linear-gradient(top, #78be2a 0, #e8e8e8 90%);
   /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #008000), color-stop(90%, #e8e8e8));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #78be2a), color-stop(90%, #e8e8e8));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #008000 0, #e8e8e8 90%);
+  background: -webkit-linear-gradient(top, #78be2a 0, #e8e8e8 90%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #008000 0, #e8e8e8 90%);
+  background: -o-linear-gradient(top, #78be2a 0, #e8e8e8 90%);
   /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #008000 0, #e8e8e8 90%);
+  background: -ms-linear-gradient(top, #78be2a 0, #e8e8e8 90%);
   /* IE10+ */
-  background: linear-gradient(to bottom, #008000 0, #e8e8e8 90%);
+  background: linear-gradient(to bottom, #78be2a 0, #e8e8e8 90%);
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@top-color', endColorstr='@bottom-color', GradientType=0);
   /* IE6-9 */
@@ -290,7 +285,7 @@ body #wrapper #services-section #services-list li a:first-of-type {
   margin-left: 35px;
 }
 body #wrapper #services-section #services-list li:hover {
-  background: #F0F0F0;
+  background: #FDD017;
 }
 body #wrapper #services-section #services-list li #service-1-anchor {
   background: url(../imgs/ballpoint.png);
@@ -389,7 +384,7 @@ body #wrapper #contacts-section div {
   border: 1px solid black;
   border-radius: 5px;
   margin-bottom: 30px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   background: #E0E0E0;
 }
 body #wrapper #service-resume div h3,
@@ -410,12 +405,18 @@ body #wrapper #clients-section div li,
 body #wrapper #contacts-section div li {
   font-size: 1em;
 }
+body #wrapper #service-resume #last-div,
+body #wrapper #pricing-section #last-div,
+body #wrapper #clients-section #last-div,
+body #wrapper #contacts-section #last-div {
+  margin-bottom: 0;
+}
 body #wrapper #service-resume table,
 body #wrapper #pricing-section table,
 body #wrapper #clients-section table,
 body #wrapper #contacts-section table {
-  margin-left: 60px;
-  margin-top: 40px;
+  margin: 0 10px;
+  margin-top: 20px;
   border-collapse: collapse;
 }
 body #wrapper #service-resume table td,
@@ -429,17 +430,35 @@ body #wrapper #contacts-section table th {
   border: 1px solid black;
   padding: 5px;
 }
+body #wrapper #contacts-section {
+  overflow: hidden;
+}
 body #wrapper #contacts-section p {
   font-size: 1.3em;
   margin: 20px 0 20px 40px;
+  display: inline-block;
+  width: 500px;
 }
 body #wrapper #contacts-section p a {
   color: blue;
 }
+body #wrapper #contacts-section iframe {
+  float: right;
+}
 body #wrapper footer {
-  display: none;
+  /*display: none;*/
   margin-top: 20px;
-  background: #3f602b;
+  background: #E8E8E8;
   padding: 5px 20px;
+  margin-bottom: 20px;
+}
+body #wrapper #main-page-footer {
+  display: none;
+  background: none;
+  text-align: center;
+}
+body #wrapper #main-page-footer div {
+  border: 5px solid #3f602b;
+  border-radius: 5px;
 }
 /*# sourceMappingURL=styles.css.map */
